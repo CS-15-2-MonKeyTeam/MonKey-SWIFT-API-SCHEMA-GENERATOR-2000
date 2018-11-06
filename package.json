@@ -1,0 +1,14 @@
+{
+  "name": "monkey-api-schema-generator",
+  "version": "1.0.0",
+  "devDependencies": {
+    "apollo": "^1.9.2"
+  },
+  "scripts": {
+    "download": "apollo schema:download --endpoint=https://monkey-graphql-api.herokuapp.com/ schema.json",
+    "generate": "apollo codegen:generate --queries=./*.graphql --schema=./schema.json ./GraphAPI.swift",
+    "all": "npm run download && npm run generate"
+  },
+  "author": "Podvalnyi Mikhail",
+  "license": "MIT"
+}
